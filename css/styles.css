@@ -1,0 +1,149 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    background-color: rgb(129, 201, 129);
+}
+.naslov {
+    width: 750px;
+    height: 90px;
+}
+.najveci {
+    width: 750px;
+    height: 1334px;
+    background-color: rgb(14, 100, 3);
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+}
+.red {
+    display: flex;
+    width: 750px;
+    height: 90px;
+    margin: 10px;
+    
+}
+.mesto {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(21, 75, 7);
+    border-radius: 50%;
+}
+.pogodak {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin: 9px 0;
+}
+.dugme {
+    width: 72px;
+    height: 72px;
+    background-color: rgb(250, 246, 229);
+    border-radius: 50%;
+    margin: 9px 5px;
+    color: rgb(14, 100, 3);
+    font-size: 40px;
+    font-weight: bold;
+}
+.resenje {
+    display: flex;
+    float: left;
+    width: 360px;
+    height: 100px;
+    /* margin: 10px; */
+    background-color: rgb(21, 75, 7);
+    border-radius: 25px;
+    border: 2px solid rgb(250, 246, 229);
+    padding-top: 5px;
+
+}
+.zadato {
+    display: flex;
+    width: 750px;
+    height: 110px;
+    margin: 10px;
+    margin-top: 20px;
+}
+.novaIgra {
+    width: 100px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: rgb(241, 199, 8);
+    float: right;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(250, 246, 229);
+    font-weight: bold;
+    font-size: 18px;
+}
+.obavestenje {
+    width: 230px;
+    height: 90px;
+    background: rgb(21, 75, 7);
+    margin-left: 60px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+.ponuda {
+    display: flex;
+    width: 555px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 25px;
+    background: rgb(21, 75, 7);
+    padding-top: 5px;
+}
+.donji {
+    display: flex;
+    width: 750px;
+    height: 110px;
+    /* margin: 10px; */
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 575px) {
+
+.naslov {
+        width: 400px;
+        height: 48px;
+}    
+  
+.najveci {
+    width: 400px;
+    height: 882px;
+    background-color: rgb(18, 71, 185);
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.red {
+    display: flex;
+    width: 390px;
+    height: 48px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.mesto {
+    width: 48px;
+    height: 48px;
+    background-color: rgb(221, 47, 212);
+    border-radius: 50%;
+}
+.pogodak {
+    width: 38px;
+    height: 38px;
+    background-color: rgb(216, 161, 9);
+    border-radius: 50%;
+    margin: 5px 0;
+}
+.dugme {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(5, 95, 53);
+    border-radius: 50%;
+    margin: 4px 3px;
+}
+}
