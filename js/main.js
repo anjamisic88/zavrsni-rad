@@ -29,6 +29,8 @@ var la4 = document.getElementById('la4');
 
 var la = [la1, la2, la3, la4];
 
+D = [0, 1, 2, 3, 4];
+
 var lb1 = document.getElementById('lb1');
 var lb2 = document.getElementById('lb2');
 var lb3 = document.getElementById('lb3');
@@ -144,17 +146,42 @@ function nizF() {
 
 nizF();
 
-all = [];
-all = a.concat(b).concat(c).concat(d).concat(e).concat(f);
+var sviNizovi = [];
+
+sviNizovi.push(a);
+sviNizovi.push(b);
+sviNizovi.push(c);
+sviNizovi.push(d);
+sviNizovi.push(e);
+sviNizovi.push(f);
+
+
+function povecajD(i) {
+    D[i] = i + 1;
+}
 
 //Pravljenje funkcije kojom izabrani simbol odlazi na mesto izabrano od strane korisnika
 
 function postavi (m) {
-    for(var i = 0; i < 24; i++) {
-        if(all[i].src == pocetni.src) {
-           all[i].src = m.src;
-           break;
-        } 
+    function popuniA() {
+        for(var i =0; i < 1; i++) {
+            for(var j = 0; j < 4; j++) {
+                if(sviNizovi[i][j].src == pocetni.src) {
+                    sviNizovi[i][j].src = m.src;
+                    break;
+                }
+            }
+        }
+    }
+    popuniA();
+
+    for(var i = 1; i < sviNizovi.length; i++) {
+        for(var j = 0; j < 4; j++) {
+            if((D[i] == (i + 1)) && (sviNizovi[i][j].src == pocetni.src)) {
+                sviNizovi[i][j].src = m.src;
+                break;
+            }
+        }
     }
 }
 
@@ -278,6 +305,12 @@ function provera(m, lm) {
     menjajObavestenje();
 }
 
+//Pravljenje funkcije za brisanje unetih vrednosti
+
+function obrisi(k) {
+        k.src = pocetni.src;
+}
+
 //Pravljenje "majke" funkcije kako bi se obe funkcije obavile klikom na dugme
 
 function majkaA() {
@@ -337,23 +370,107 @@ $(document).ready(function() {
     });
     $('#dugme1').on('click', function() {
         majkaA();
+        $('#dugme2').removeClass('dugme1').addClass('dugme');
+        povecajD(1);
     });
     $('#dugme2').on('click', function() {
         majkaB();
+        $('#dugme3').removeClass('dugme1').addClass('dugme');
+        povecajD(2);
     });
     $('#dugme3').on('click', function() {
         majkaC();
+        $('#dugme4').removeClass('dugme1').addClass('dugme');
+        povecajD(3);
     });
     $('#dugme4').on('click', function() {
         majkaD();
+        $('#dugme5').removeClass('dugme1').addClass('dugme');
+        povecajD(4);
     });
     $('#dugme5').on('click', function() {
         majkaE();
+        $('#dugme6').removeClass('dugme1').addClass('dugme');
+        povecajD(5);
     });
     $('#dugme6').on('click', function() {
         majkaF();
     });
+    $('#a1').on('click', function() {
+        obrisi(this);
+    });
+    $('#a2').on('click', function() {
+        obrisi(this);
+    });
+    $('#a3').on('click', function() {
+        obrisi(this);
+    });
+    $('#a4').on('click', function() {
+        obrisi(this);
+    });
+    $('#b1').on('click', function() {
+        obrisi(this);
+    });
+    $('#b2').on('click', function() {
+        obrisi(this);
+    });
+    $('#b3').on('click', function() {
+        obrisi(this);
+    });
+    $('#b4').on('click', function() {
+        obrisi(this);
+    });
+    $('#c1').on('click', function() {
+        obrisi(this);
+    });
+    $('#c2').on('click', function() {
+        obrisi(this);
+    });
+    $('#c3').on('click', function() {
+        obrisi(this);
+    });
+    $('#c4').on('click', function() {
+        obrisi(this);
+    });
+    $('#d1').on('click', function() {
+        obrisi(this);
+    });
+    $('#d2').on('click', function() {
+        obrisi(this);
+    });
+    $('#d3').on('click', function() {
+        obrisi(this);
+    });
+    $('#d4').on('click', function() {
+        obrisi(this);
+    });
+    $('#e1').on('click', function() {
+        obrisi(this);
+    });
+    $('#e2').on('click', function() {
+        obrisi(this);
+    });
+    $('#e3').on('click', function() {
+        obrisi(this);
+    });
+    $('#e4').on('click', function() {
+        obrisi(this);
+    });
+    $('#f1').on('click', function() {
+        obrisi(this);
+    });
+    $('#f2').on('click', function() {
+        obrisi(this);
+    });
+    $('#f3').on('click', function() {
+        obrisi(this);
+    });
+    $('#f4').on('click', function() {
+        obrisi(this);
+    });
+    
 });
+
 
 console.log(zadato);
 
